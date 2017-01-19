@@ -1,0 +1,140 @@
+{
+    "Workspaces": [
+        {
+            "name": "Node.js",
+            "icon": "node.png",
+            "image": "node",
+            "versions": ["latest", "7.4", "6.9", "4.7"],
+            "reference": "https://hub.docker.com/_/node/",
+            "dockerfile": "Dockerfile-node",
+            "script": {
+                "command": "npm start",
+                "build": {
+                    "context": ".",
+                    "dockerfile": "Dockerfile"
+                },
+                "volumes": [
+                    ".:/home/app",
+                    "/home/app/node_modules"
+                ]
+            }
+        },
+        {
+            "name": "io.js",
+            "icon": "iojs.png",
+            "image": "iojs",
+            "versions": ["latest", "3.3", "2.5", "1.8"],
+            "reference": "https://hub.docker.com/_/iojs/"
+        },
+        {
+            "name": "Swift",
+            "icon": "swift.png",
+            "image": "swiftdocker/swift",
+            "versions": ["latest"],
+            "reference": "https://hub.docker.com/r/swiftdocker/swift/"
+        },
+        {
+            "name": "Go",
+            "icon": "golang.png",
+            "image": "golang",
+            "versions": ["latest", "1.8", "1.7", "1.6"],
+            "reference": "https://hub.docker.com/_/golang/"
+        },
+        {
+            "name": "Python",
+            "icon": "python.png",
+            "image": "python",
+            "versions": ["latest", "3.6", "3.4", "3.3", "2.7"],
+            "reference": "https://hub.docker.com/_/python/"
+        },
+        {
+            "name": "PHP",
+            "icon": "php.png",
+            "image": "php",
+            "versions": ["latest", "7.1", "7.0", "5.6"],
+            "reference": "https://hub.docker.com/_/php/"
+        },
+        {
+            "name": "Ruby",
+            "icon": "ruby.png",
+            "image": "ruby",
+            "versions": ["latest", "2.4", "2.3", "2.2"],
+            "reference": "https://hub.docker.com/_/ruby/"
+        },
+        {
+            "name": "Java",
+            "icon": "java.png",
+            "image": "java",
+            "versions": ["latest", "9", "8", "7"],
+            "reference": "https://hub.docker.com/_/java/"
+        },
+        {
+            "name": "Perl",
+            "icon": "perl.png",
+            "image": "perl",
+            "versions": ["latest", "5"],
+            "reference": "https://hub.docker.com/_/perl/"
+        }
+    ],
+    "OS": [
+        {
+            "name": "Ubuntu",
+            "icon": "ubuntu.png",
+            "image": "ubuntu",
+            "versions": ["latest", "17.04", "16.04", "14.04", "12.04"],
+            "reference": "https://hub.docker.com/_/ubuntu/"
+        },
+        {
+            "name": "CentOS",
+            "icon": "centos.png",
+            "image": "centos",
+            "versions": ["latest", "7", "6", "5"],
+            "reference": "https://hub.docker.com/_/centos/"
+        },
+        {
+            "name": "Debian",
+            "icon": "debian.png",
+            "image": "debian",
+            "versions": ["latest", "8", "7"],
+            "reference": "https://hub.docker.com/_/debian/"
+        },
+        {
+            "name": "Fedora",
+            "icon": "fedora.png",
+            "image": "fedora",
+            "versions": ["latest", "25", "24"],
+            "reference": "https://hub.docker.com/_/fedora/"
+        }
+    ],
+    "Others":[
+        {
+            "name": "Zend Server",
+            "icon": "php-zendserver.png",
+            "image": "php-zendserver",
+            "versions": ["latest", "9.0", "8.5", "7.0"],
+            "reference": "https://hub.docker.com/_/php-zendserver/"
+        },
+        {
+            "name": "WordPress",
+            "icon": "wordpress.png",
+            "image": "wordpress",
+            "versions": ["latest", "4.7.1"],
+            "reference": "https://hub.docker.com/_/wordpress/"
+        },
+        {
+            "name": "Drupal",
+            "icon": "drupal.png",
+            "image": "drupal",
+            "versions": ["latest", "8.2.5", "7.53"],
+            "reference": "https://hub.docker.com/_/drupal/"
+        },
+        {
+            "name": "Joomla",
+            "icon": "joomla.png",
+            "image": "joomla",
+            "versions": ["latest", "3.6.5"],
+            "reference": "https://hub.docker.com/_/joomla/"
+        }
+    ]
+    
+}
