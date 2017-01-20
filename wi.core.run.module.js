@@ -12,7 +12,8 @@
 
 "use strict";
 
-let TemplateEngine = require("../wi.core.template.js");
+let fs = require("fs"),
+    TemplateEngine = require("../wi.core.template.js");
 
 module.exports = {
     /**
@@ -33,11 +34,39 @@ module.exports = {
     /**
      * Function to get settings value
      * 
-     * @param string key
      * @return mixed|null
      */
-    getRunners: function(key){
+    getRunners: function(){
         return this.runners;
+    },
+    
+    /**
+     * Function to get runner settings by name
+     * 
+     * @param string name
+     * @return mixed|null
+     */
+    getRunner: function(name){
+        for(let groupKey in this.runners){
+            for(let runnerKey in this.runners[groupKey]){
+                if(this.runners[groupKey][runnerKey].image === name){
+                    return this.runners[groupKey][runnerKey];
+                    break;
+                }
+            }
+        }
+        
+        return null;
+    },
+    
+    /**
+     * Function to return Dockerfile by name
+     * 
+     * @param string name
+     * @return string|null
+     */
+    getDockerFile: function(name){
+        try{ return fs.readFileSync(__dirname + "/" + name).toString(); } catch(e) { return null; }
     },
     
     /**

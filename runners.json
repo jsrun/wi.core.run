@@ -3,6 +3,7 @@
         {
             "name": "Node.js",
             "icon": "node.png",
+            "description": "Node.js is a JavaScript-based platform for server-side and networking applications.",
             "image": "node",
             "versions": ["latest", "7.4", "6.9", "4.7"],
             "reference": "https://hub.docker.com/_/node/",
@@ -22,6 +23,7 @@
         {
             "name": "io.js",
             "icon": "iojs.png",
+            "description": "io.js is an npm compatible platform originally based on node.js",
             "image": "iojs",
             "versions": ["latest", "3.3", "2.5", "1.8"],
             "reference": "https://hub.docker.com/_/iojs/"
@@ -29,6 +31,7 @@
         {
             "name": "Swift",
             "icon": "swift.png",
+            "description": "Swift, in docker!",
             "image": "swiftdocker/swift",
             "versions": ["latest"],
             "reference": "https://hub.docker.com/r/swiftdocker/swift/"
@@ -36,6 +39,7 @@
         {
             "name": "Go",
             "icon": "golang.png",
+            "description": "Go (golang) is a general purpose, higher-level, imperative programming language.",
             "image": "golang",
             "versions": ["latest", "1.8", "1.7", "1.6"],
             "reference": "https://hub.docker.com/_/golang/"
@@ -43,6 +47,7 @@
         {
             "name": "Python",
             "icon": "python.png",
+            "description": "Python is an interpreted, interactive, object-oriented, open-source programming language.",
             "image": "python",
             "versions": ["latest", "3.6", "3.4", "3.3", "2.7"],
             "reference": "https://hub.docker.com/_/python/"
@@ -50,6 +55,7 @@
         {
             "name": "PHP",
             "icon": "php.png",
+            "description": "While designed for web development, the PHP scripting language also provides general-purpose use.",
             "image": "php",
             "versions": ["latest", "7.1", "7.0", "5.6"],
             "reference": "https://hub.docker.com/_/php/"
@@ -57,6 +63,7 @@
         {
             "name": "Ruby",
             "icon": "ruby.png",
+            "description": "Ruby is a dynamic, reflective, object-oriented, general-purpose, open-source programming language.",
             "image": "ruby",
             "versions": ["latest", "2.4", "2.3", "2.2"],
             "reference": "https://hub.docker.com/_/ruby/"
@@ -64,6 +71,7 @@
         {
             "name": "Java",
             "icon": "java.png",
+            "description": "Java is a concurrent, class-based, and object-oriented programming language.",
             "image": "java",
             "versions": ["latest", "9", "8", "7"],
             "reference": "https://hub.docker.com/_/java/"
@@ -71,6 +79,7 @@
         {
             "name": "Perl",
             "icon": "perl.png",
+            "description": "Perl is a high-level, general-purpose, interpreted, dynamic programming language.",
             "image": "perl",
             "versions": ["latest", "5"],
             "reference": "https://hub.docker.com/_/perl/"
@@ -80,6 +89,7 @@
         {
             "name": "Ubuntu",
             "icon": "ubuntu.png",
+            "description": "Ubuntu is a Debian-based Linux operating system based on free software.",
             "image": "ubuntu",
             "versions": ["latest", "17.04", "16.04", "14.04", "12.04"],
             "reference": "https://hub.docker.com/_/ubuntu/"
@@ -87,6 +97,7 @@
         {
             "name": "CentOS",
             "icon": "centos.png",
+            "description": "The official build of CentOS.",
             "image": "centos",
             "versions": ["latest", "7", "6", "5"],
             "reference": "https://hub.docker.com/_/centos/"
@@ -94,6 +105,7 @@
         {
             "name": "Debian",
             "icon": "debian.png",
+            "description": "Debian is a Linux distribution that's composed entirely of free and open-source software.",
             "image": "debian",
             "versions": ["latest", "8", "7"],
             "reference": "https://hub.docker.com/_/debian/"
@@ -101,6 +113,7 @@
         {
             "name": "Fedora",
             "icon": "fedora.png",
+            "description": "Official Docker builds of Fedora.",
             "image": "fedora",
             "versions": ["latest", "25", "24"],
             "reference": "https://hub.docker.com/_/fedora/"
@@ -110,6 +123,7 @@
         {
             "name": "Zend Server",
             "icon": "php-zendserver.png",
+            "description": "Zend Server - the integrated PHP application platform for mobile and web apps.",
             "image": "php-zendserver",
             "versions": ["latest", "9.0", "8.5", "7.0"],
             "reference": "https://hub.docker.com/_/php-zendserver/"
@@ -117,6 +131,7 @@
         {
             "name": "WordPress",
             "icon": "wordpress.png",
+            "description": "The WordPress rich content management system can utilize plugins, widgets, and themes.",
             "image": "wordpress",
             "versions": ["latest", "4.7.1"],
             "reference": "https://hub.docker.com/_/wordpress/"
@@ -124,6 +139,7 @@
         {
             "name": "Drupal",
             "icon": "drupal.png",
+            "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "image": "drupal",
             "versions": ["latest", "8.2.5", "7.53"],
             "reference": "https://hub.docker.com/_/drupal/"
@@ -131,6 +147,7 @@
         {
             "name": "Joomla",
             "icon": "joomla.png",
+            "description": "Joomla! is an open source content management system.",
             "image": "joomla",
             "versions": ["latest", "3.6.5"],
             "reference": "https://hub.docker.com/_/joomla/"

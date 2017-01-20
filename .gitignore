@@ -43,3 +43,4 @@ jspm_packages
 !/*.css
 !/*.ejs
 !/*.md
+!/Dockerfile*
