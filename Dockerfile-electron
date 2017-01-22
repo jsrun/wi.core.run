@@ -1,4 +1,4 @@
-FROM node:@version
+FROM electronuserland/electron-builder:@version
 MAINTAINER Andre Ferreira <andrehrf@gmail.com>
 
 RUN id -u app &>/dev/null || useradd --user-group --create-home --shell /bin/false app
@@ -16,4 +16,4 @@ COPY . $HOME
 RUN chown -R app:app $HOME/*
 USER app
 
-CMD ["npm", "start"]
+CMD ["script/build","--linux deb tar.xz"]

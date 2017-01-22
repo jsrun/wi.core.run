@@ -7,6 +7,9 @@
             "image": "node",
             "versions": ["latest", "7.4", "6.9", "4.7"],
             "reference": "https://hub.docker.com/_/node/",
+            "command-create": "git clone https://github.com/chrisveness/koa-hello-world @dir",
+            "command-build": "npm install",
+            "command-start": "npm start",
             "dockerfile": "Dockerfile-node",
             "script": {
                 "command": "npm start",
@@ -26,7 +29,22 @@
             "description": "io.js is an npm compatible platform originally based on node.js",
             "image": "iojs",
             "versions": ["latest", "3.3", "2.5", "1.8"],
-            "reference": "https://hub.docker.com/_/iojs/"
+            "reference": "https://hub.docker.com/_/iojs/",
+            "command-create": "git clone https://github.com/chrisveness/koa-hello-world @dir",
+            "command-build": "npm install",
+            "command-start": "npm start",
+            "dockerfile": "Dockerfile-iojs",
+            "script": {
+                "command": "npm start",
+                "build": {
+                    "context": ".",
+                    "dockerfile": "Dockerfile"
+                },
+                "volumes": [
+                    ".:/home/app",
+                    "/home/app/node_modules"
+                ]
+            }
         },
         {
             "name": "Swift",
@@ -37,12 +55,65 @@
             "reference": "https://hub.docker.com/r/swiftdocker/swift/"
         },
         {
+            "name": "Electron",
+            "icon": "electron.png",
+            "description": "A complete solution to package and build a ready for distribution Electron app for MacOS, Windows and Linux with “auto update” support out of the box.",
+            "image": "electronuserland/electron-builder",
+            "versions": ["latest"],
+            "reference": "https://hub.docker.com/r/electronuserland/electron-builder/",
+            "command-create": "git clone https://github.com/electron/electron-quick-start @dir",
+            "command-build": "npm install",
+            "command-start": "npm start",
+            "dockerfile": "Dockerfile-electron",
+            "script": {
+                "build": {
+                    "context": ".",
+                    "dockerfile": "Dockerfile"
+                },
+                "volumes": [
+                    ".:/home/app",
+                    "/home/app/node_modules"
+                ]
+            }
+        },
+        {
+            "name": "PhoneGap",
+            "icon": "phonegap.png",
+            "description": "This repository contains Dockerfile of PhoneGap for Docker's build published to the public Docker Hub.",
+            "image": "webratio/phonegap",
+            "versions": ["latest", "6.2", "4.2", "4.0", "3.6", "3.5"],
+            "reference": "https://hub.docker.com/r/webratio/phonegap/",
+            "command-create": "docker run -v .:/home/app webratio/phonegap:@version phonegap create @namespace",
+            "command-build": "docker run -v .:/home/app webratio/phonegap:@version phonegap build android",
+            "command-start": "npm start",
+            "dockerfile": "Dockerfile-phonegap",
+            "script": {
+                "build": {
+                    "context": ".",
+                    "dockerfile": "Dockerfile"
+                },
+                "volumes": [
+                    ".:/home/app"
+                ]
+            }
+        },
+        {
             "name": "Go",
             "icon": "golang.png",
             "description": "Go (golang) is a general purpose, higher-level, imperative programming language.",
             "image": "golang",
             "versions": ["latest", "1.8", "1.7", "1.6"],
-            "reference": "https://hub.docker.com/_/golang/"
+            "reference": "https://hub.docker.com/_/golang/",
+            "dockerfile": "Dockerfile-go",
+            "script": {
+                "build": {
+                    "context": ".",
+                    "dockerfile": "Dockerfile"
+                },
+                "volumes": [
+                    ".:/home/app"
+                ]
+            }
         },
         {
             "name": "Python",

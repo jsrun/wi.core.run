@@ -21,15 +21,6 @@ module.exports = {
      * @type object
      */
     runners: require("./runners.json"),
-        
-    /**
-     * List module assets
-     * @type object
-     */
-    assets: {
-        css: [__dirname + "/wi.core.run.style.css"],
-        js: [__dirname + "/wi.core.run.events.js"]
-    },
     
     /**
      * Function to get settings value

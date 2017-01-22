@@ -12,17 +12,17 @@
 
 "use strict";
 
-(function(){
+webide.module("run", function(commands){
     //Map command to create terminal
-    webide.commands.add("webide:run", function(){
-        webide.run.default();
+    commands.add("webide:run", function(){
+        this.run.default();
     });
     
-    webide.commands.add("webide:runwith", function(args){
-        webide.run.with(args.name, {});//{cwd: }
+    commands.add("webide:runwith", function(args){
+        this.run.with(args.name, {});//{cwd: }
     });
     
-    webide.run = {
+    this.run = {
         "default": function(options){
             
         },
@@ -31,4 +31,4 @@
             
         }
     };
-})();
+});

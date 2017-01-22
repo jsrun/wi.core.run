@@ -1,4 +1,4 @@
-FROM node:@version
+FROM iojs:@version
 MAINTAINER Andre Ferreira <andrehrf@gmail.com>
 
 RUN id -u app &>/dev/null || useradd --user-group --create-home --shell /bin/false app
