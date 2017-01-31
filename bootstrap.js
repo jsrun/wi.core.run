@@ -66,21 +66,16 @@ module.exports = {
      * @param object app
      * @return this
      */
-    bootstrap: function(_this){ 
-        let __this = this;
-        
-        _this.commands.addCommand({
-            name: "webide:run",
-            bind: {mac: "F5", win: "F5"},
-        });
+    bootstrap: function(commands, navbar, run){         
+        commands.addCommand({ name: "webide:run", bind: {mac: "F5", win: "F5"} });
                 
-        _this.navbar.addItem("Run/Run", {
+        navbar.addItem("Run/Run", {
             command: "webide:run",
             divide: true,
             disabled: true
         }, 600);
         
-        let runners = this.getRunners().Workspaces;
+        let runners = run.getRunners().Workspaces;
         var submenuArr = [];
         for(let runner in runners){
             submenuArr.push({
@@ -90,10 +85,6 @@ module.exports = {
             });
         }
         
-        _this.navbar.addItem("Run/Run With", {
-            submenu: submenuArr
-        }, 600);
-                
-        return this;
+        navbar.addItem("Run/Run With", { submenu: submenuArr }, 600);
     }
 };
