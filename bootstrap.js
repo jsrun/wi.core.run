@@ -12,8 +12,7 @@
 
 "use strict";
 
-let fs = require("fs"),
-    TemplateEngine = require("../wi.core.template.js");
+let fs = require("fs");
 
 module.exports = {
     /**
