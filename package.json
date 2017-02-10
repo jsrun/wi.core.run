@@ -1,6 +1,6 @@
 {
     "name": "wi.core.run",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "description": "WebIDE + Docker workspaces execution interface",
     "author": "André Ferreira <andrehrf@gmail.com>",
     "license": "MIT",

@@ -1,16 +1,8 @@
 FROM golang:@version
 MAINTAINER Andre Ferreira <andrehrf@gmail.com>
 
-RUN id -u app &>/dev/null || useradd --user-group --create-home --shell /bin/false app
-ENV HOME=/home/app
-RUN chown -R app:app $HOME/*
-
-USER app
-WORKDIR $HOME
-
-USER root
+RUN mkdir /app
+ENV HOME=/app
 COPY . $HOME
-RUN chown -R app:app $HOME/*
-USER app
 
 CMD ["go", "run", "app"]

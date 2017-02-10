@@ -1,19 +1,13 @@
 FROM iojs:@version
 MAINTAINER Andre Ferreira <andrehrf@gmail.com>
 
-RUN id -u app &>/dev/null || useradd --user-group --create-home --shell /bin/false app
-ENV HOME=/home/app
+RUN mkdir /app
+ENV HOME=/app
 
 COPY package.json $HOME
-RUN chown -R app:app $HOME/*
-
-USER app
 WORKDIR $HOME
 RUN npm install --progress=false
 
-USER root
 COPY . $HOME
-RUN chown -R app:app $HOME/*
-USER app
 
 CMD ["npm", "start"]
